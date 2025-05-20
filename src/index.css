@@ -1,0 +1,110 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 14% 24%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 14% 24%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 14% 24%;
+
+    --primary: 210 100% 51%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 14% 24%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8% 56%;
+
+    --accent: 220 14% 96%;
+    --accent-foreground: 222 14% 24%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 210 100% 51%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 14% 24%;
+    --sidebar-primary: 210 100% 51%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 222 14% 24%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 210 100% 51%;
+  }
+
+  .dark {
+    --background: 222 14% 18%;
+    --foreground: 0 0% 98%;
+
+    --card: 222 14% 18%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 222 14% 18%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 210 100% 51%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 222 14% 23%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 222 14% 23%;
+    --muted-foreground: 220 8% 70%;
+
+    --accent: 222 14% 23%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 68% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 222 14% 28%;
+    --input: 222 14% 28%;
+    --ring: 210 100% 56%;
+
+    --sidebar-background: 222 14% 18%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 210 100% 51%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 222 14% 23%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 222 14% 28%;
+    --sidebar-ring: 210 100% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  .card-shadow {
+    @apply shadow-[0_2px_8px_0_rgba(0,0,0,0.06)];
+  }
+  
+  .card-shadow-hover {
+    @apply transition-shadow duration-300 hover:shadow-[0_5px_15px_0_rgba(0,0,0,0.07)];
+  }
+  
+  .transition-quick {
+    @apply transition-all duration-200 ease-in-out;
+  }
+}
